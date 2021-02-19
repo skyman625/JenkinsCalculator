@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 
 class Calculator {
 
@@ -78,23 +79,8 @@ class Calculator {
         StringBuilder sb = new StringBuilder();
         sb.append(n);
         // create an object of Random class
-        Random random = new Random();
-    
-        // specify length of random string
-        int length = 7;
-    
-        for(int i = 0; i < length; i++) {
-        
-            // generate random index number
-            int index = random.nextInt(alphabet.length());
-        
-            // get character specified by index
-            // from the string
-            char randomChar = alphabet.charAt(index);
-        
-            // append the character to string builder
-            sb.append(randomChar);
-        }
+        UUID uuid = UUID.randomUUID();
+        sb.append(uuid.toString());
         String randomString = sb.toString();
         return null;
     }
