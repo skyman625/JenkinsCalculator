@@ -82,6 +82,4 @@ class Calculator {
         String randomString = sb.toString();
         return randomString;
     }
-
-
 }
