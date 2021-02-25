@@ -1,6 +1,6 @@
 pipeline {
     environment {
-            registry = "Your_Dockerhub_Username/Your_Dockerhub_Repository_Name"
+            registry = "skyman25/jenkins_calculator_app"
             registryCredential = 'dockerhub'
             dockerImage=''
     }
@@ -46,7 +46,7 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar'
             }
         }
-        
+
         stage ('Building image') {
             steps {
                 script {
